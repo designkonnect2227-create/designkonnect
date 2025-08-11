@@ -13,6 +13,8 @@ import Architects from "./pages/Architects";
 import ArchitectProfile from "./pages/ArchitectProfile";
 import ForClients from "./pages/ForClients";
 import ForArchitects from "./pages/ForArchitects";
+import Contact from "./pages/Contact";
+import Dashboard from "./pages/Dashboard";
 
 const queryClient = new QueryClient();
 
@@ -28,6 +30,8 @@ const App = () => (
               <Route path="/" element={<Index />} />
               <Route path="/clients" element={<ForClients />} />
               <Route path="/architects-portal" element={<ForArchitects />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/dashboard" element={<Dashboard />} />
               <Route path="/projects" element={<Projects />} />
               <Route path="/projects/:slug" element={<ProjectDetail />} />
               <Route path="/architects" element={<Architects />} />

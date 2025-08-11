@@ -16,7 +16,10 @@ export type Project = {
   specialties: string[];
 };
 
-const img = (q: string) => `https://source.unsplash.com/1080x720/?architecture,india,${q}`;
+const img = (q: string) => {
+  const lock = Math.abs(Array.from(q).reduce((a, c) => a + c.charCodeAt(0), 0));
+  return `https://loremflickr.com/1080/720/architecture,india?lock=${lock}`;
+};
 
 export const projects: Project[] = [
   {
