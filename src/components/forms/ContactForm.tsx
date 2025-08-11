@@ -28,12 +28,32 @@ const ContactForm = () => {
       message: values.message,
       source_path: window.location.pathname,
     });
+
     if (error) {
       toast({ title: 'Could not send message', description: error.message });
-    } else {
-      toast({ title: 'Message sent', description: 'Thanks! We will get back to you soon.' });
-      reset();
+      return;
     }
+
+    // Notify via Supabase Edge Function (configure with Resend/SMTP secret)
+    try {
+      await supabase.functions.invoke('contact-notify', {
+        body: {
+          to: 'designkonnect2227@gmail.com',
+          name: values.name,
+          email: values.email,
+          phone: values.phone ?? '',
+          type: values.type,
+          subject: values.subject ?? 'New inquiry',
+          message: values.message,
+          page: window.location.href,
+        },
+      });
+    } catch (e) {
+      // Ignore notify failure; data is safely saved in DB
+    }
+
+    toast({ title: 'Message sent', description: 'Thanks! We will notify the team and get back to you soon.' });
+    reset();
   };
 
   return (
