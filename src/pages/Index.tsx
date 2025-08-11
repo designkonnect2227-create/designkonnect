@@ -25,25 +25,40 @@ const Index = ({ aboutOnly = false }: { aboutOnly?: boolean }) => {
         <meta name="description" content="Explore Indian architecture projects and connect with leading architects on DesignKonnect." />
         <link rel="canonical" href="/" />
       </Helmet>
-      <section className="relative py-24">
+      <section className="relative pt-24 pb-20">
         <div
-          className="absolute inset-0 -z-10 bg-cover bg-center"
+          className="absolute inset-0 -z-10 bg-cover bg-center opacity-70"
           style={{ backgroundImage: "url('/images/hero-buildings.jpg')" }}
           aria-hidden="true"
         />
-        <div className="absolute inset-0 -z-10 bg-gradient-to-t from-background/90 via-background/70 to-background/40" aria-hidden="true" />
-        <div className="text-center max-w-3xl mx-auto animate-enter">
-          <div className="flex items-center justify-center gap-4 mb-6">
-            <img src="/lovable-uploads/bd0a0fee-876a-47b3-8b74-e6ec2838e0b2.png" alt="DesignKonnect logo" className="h-16 w-16" />
-            <div>
-              <h1 className="text-5xl font-bold tracking-tight">DesignKonnect</h1>
-              <p className="text-lg text-muted-foreground">Connect Vision To Architecture Precision</p>
-            </div>
+        <div className="absolute inset-0 -z-10 bg-gradient-to-tr from-background/95 via-background/85 to-background/60" aria-hidden="true" />
+
+        <div className="max-w-5xl mx-auto text-left">
+          <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight leading-tight">
+            Connecting <span className="text-accent">Visionary</span> <span className="text-primary">Architects</span> with
+            <br className="hidden md:block" /> Dream Projects
+          </h1>
+          <p className="mt-5 text-lg text-muted-foreground max-w-3xl">
+            DesignKonnect bridges the gap between exceptional architectural talent and clients with ambitious visions. Find your perfect
+            architectural match today.
+          </p>
+
+          <div className="mt-8 flex flex-col sm:flex-row gap-4">
+            <Link to="/architects" className="px-6 py-3 rounded-md bg-primary text-primary-foreground font-medium hover:opacity-90 transition-opacity">
+              Find an Architect
+            </Link>
+            <Link to="/clients" className="px-6 py-3 rounded-md border border-border font-medium hover:bg-secondary transition-colors">
+              Submit Your Project
+            </Link>
           </div>
-          <p className="text-muted-foreground mb-8">Discover curated architectural projects across India and connect with the architects behind them.</p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/clients" className="px-6 py-3 rounded-md bg-primary text-primary-foreground font-medium hover:opacity-90 transition-opacity">I’m a Client</Link>
-            <Link to="/architects-portal" className="px-6 py-3 rounded-md border border-border font-medium hover:bg-secondary transition-colors">I’m an Architect</Link>
+
+          <div className="mt-8 flex items-center gap-4">
+            <div className="flex -space-x-3">
+              <img className="h-9 w-9 rounded-full ring-2 ring-background" src="https://i.pravatar.cc/64?img=5" alt="Architect avatar 1" loading="lazy" />
+              <img className="h-9 w-9 rounded-full ring-2 ring-background" src="https://i.pravatar.cc/64?img=15" alt="Architect avatar 2" loading="lazy" />
+              <img className="h-9 w-9 rounded-full ring-2 ring-background" src="https://i.pravatar.cc/64?img=25" alt="Architect avatar 3" loading="lazy" />
+            </div>
+            <p className="text-sm text-muted-foreground">250+ Architects ready to bring your vision to life</p>
           </div>
         </div>
       </section>
