@@ -25,13 +25,7 @@ const Index = ({ aboutOnly = false }: { aboutOnly?: boolean }) => {
         <meta name="description" content="Explore Indian architecture projects and connect with leading architects on DesignKonnect." />
         <link rel="canonical" href="/" />
       </Helmet>
-      <section className="relative pt-24 pb-20">
-        <div
-          className="absolute inset-0 -z-10 bg-cover bg-center opacity-70"
-          style={{ backgroundImage: "url('/images/hero-buildings.jpg')" }}
-          aria-hidden="true"
-        />
-        <div className="absolute inset-0 -z-10 bg-gradient-to-tr from-background/95 via-background/85 to-background/60" aria-hidden="true" />
+      <section className="pt-24 pb-20">
 
         <div className="max-w-5xl mx-auto text-left">
           <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight leading-tight">

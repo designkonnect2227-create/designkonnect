@@ -15,6 +15,7 @@ import ForClients from "./pages/ForClients";
 import ForArchitects from "./pages/ForArchitects";
 import Contact from "./pages/Contact";
 import Dashboard from "./pages/Dashboard";
+import About from "./pages/About";
 
 const queryClient = new QueryClient();
 
@@ -36,7 +37,7 @@ const App = () => (
               <Route path="/projects/:slug" element={<ProjectDetail />} />
               <Route path="/architects" element={<Architects />} />
               <Route path="/architects/:slug" element={<ArchitectProfile />} />
-              <Route path="/about" element={<Index aboutOnly />} />
+              <Route path="/about" element={<About />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>
