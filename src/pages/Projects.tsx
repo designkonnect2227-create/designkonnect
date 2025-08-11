@@ -1,13 +1,28 @@
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
+import { useSearchParams } from 'react-router-dom';
 import CategoryFilter from '@/components/filters/CategoryFilter';
 import ProjectCard from '@/components/cards/ProjectCard';
 import { projects } from '@/data/projects';
 
 const Projects = () => {
-  const categories = Array.from(new Set(projects.map((p) => p.category)));
-  const [active, setActive] = useState('All');
+  const categories = useMemo(() => Array.from(new Set(projects.map((p) => p.category))), []);
+  const [searchParams, setSearchParams] = useSearchParams();
+  const initialActive = useMemo(() => {
+    const param = searchParams.get('category');
+    return param && (param === 'All' || categories.includes(param)) ? param : 'All';
+  }, [searchParams, categories]);
+
+  const [active, setActive] = useState(initialActive);
   const filtered = useMemo(() => (active === 'All' ? projects : projects.filter((p) => p.category === active)), [active]);
+
+  useEffect(() => {
+    if (active === 'All') {
+      if (searchParams.get('category')) setSearchParams({});
+    } else if (searchParams.get('category') !== active) {
+      setSearchParams({ category: active });
+    }
+  }, [active, searchParams, setSearchParams]);
 
   return (
     <section className="py-10">
