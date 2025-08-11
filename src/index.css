@@ -17,8 +17,8 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 205 90% 45%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 0 72% 52%;
+    --primary-foreground: 0 0% 100%;
 
     --secondary: 210 25% 98%;
     --secondary-foreground: 224 56% 16%;
@@ -26,7 +26,7 @@ All colors MUST be HSL.
     --muted: 210 20% 96%;
     --muted-foreground: 215 16% 40%;
 
-    --accent: 24 94% 53%;
+    --accent: 200 90% 56%;
     --accent-foreground: 224 56% 16%;
 
     --destructive: 0 84.2% 60.2%;
@@ -34,7 +34,7 @@ All colors MUST be HSL.
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 205 90% 45%;
+    --ring: 0 72% 52%;
 
     --radius: 0.5rem;
 
@@ -63,8 +63,8 @@ All colors MUST be HSL.
     --popover-foreground: 210 40% 96%;
 
     /* brand accent: warm amber */
-    --primary: 38 92% 57%;
-    --primary-foreground: 225 14% 10%;
+    --primary: 0 72% 52%;
+    --primary-foreground: 210 40% 98%;
 
     --secondary: 225 13% 16%;
     --secondary-foreground: 210 40% 96%;
@@ -80,7 +80,7 @@ All colors MUST be HSL.
 
     --border: 225 13% 16%;
     --input: 225 13% 16%;
-    --ring: 38 92% 57%;
+    --ring: 0 72% 52%;
 
     --bg-gradient: radial-gradient(1200px 600px at 0% 0%, hsl(var(--primary) / 0.10), transparent 55%),
       radial-gradient(900px 500px at 100% 0%, hsl(var(--primary) / 0.08), transparent 55%);
@@ -104,8 +104,10 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
-    background-image: none;
-    background-attachment: initial;
-    background-size: auto;
+    background-image: var(--bg-gradient), linear-gradient(0deg, hsl(var(--background) / 0.92), hsl(var(--background) / 0.92)), url('/images/hero-buildings.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
   }
 }
