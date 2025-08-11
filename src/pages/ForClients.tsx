@@ -23,6 +23,7 @@ const ForClients = () => {
       <div className="mb-6">
         <h1 className="text-3xl font-bold mb-2">Featured Architectural Projects</h1>
         <p className="text-muted-foreground">Discover exceptional projects from our network of talented architects.</p>
+        <p className="text-sm text-muted-foreground mt-1">We don’t just build spaces — we deliver experiences that elevate everyday living.</p>
       </div>
 
       <div className="mb-6">
@@ -31,7 +32,7 @@ const ForClients = () => {
       </div>
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {filtered.map((p) => (
+        {filtered.slice(0, 6).map((p) => (
           <ProjectCard
             key={p.id}
             slug={p.slug}
@@ -43,6 +44,9 @@ const ForClients = () => {
             description={p.description}
           />
         ))}
+      </div>
+      <div className="flex justify-center mt-6">
+        <Link to="/projects" className="px-4 py-2 rounded-md border border-border text-sm font-medium hover:bg-secondary transition-colors">Explore all projects</Link>
       </div>
 
       <div className="mt-12 border-t border-border/60 pt-8">
