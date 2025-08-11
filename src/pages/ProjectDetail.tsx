@@ -60,9 +60,22 @@ const ProjectDetail = () => {
         <meta name="description" content={project.description} />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
       </Helmet>
+      {/* Hero Image */}
+      <div className="mb-6 relative">
+        <AspectRatio ratio={16/9}>
+          <img
+            src={project.images[0]}
+            alt={`${project.title} hero image`}
+            className="w-full h-full object-cover rounded-md border"
+            loading="eager"
+            onError={(e) => { (e.currentTarget as HTMLImageElement).src = '/placeholder.svg'; }}
+          />
+        </AspectRatio>
+        <span className="absolute top-3 right-3 px-2 py-1 rounded bg-secondary text-xs border border-border">{project.category}</span>
+      </div>
+
       <div className="mb-6">
         <div className="flex items-center gap-3 mb-2">
-          <span className="px-2 py-1 rounded bg-secondary text-xs">{project.category}</span>
           <span className="text-xs text-muted-foreground">{project.location}</span>
         </div>
         <h1 className="text-4xl font-bold tracking-tight mb-2">{project.title}</h1>
@@ -83,6 +96,7 @@ const ProjectDetail = () => {
             alt={`${project.title} image ${i + 1}`}
             className="w-full h-64 md:h-80 object-cover rounded-md"
             loading="lazy"
+            onError={(e) => { (e.currentTarget as HTMLImageElement).src = '/placeholder.svg'; }}
           />
         ))}
       </div>
