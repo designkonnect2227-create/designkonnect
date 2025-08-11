@@ -25,9 +25,14 @@ const Index = ({ aboutOnly = false }: { aboutOnly?: boolean }) => {
         <meta name="description" content="Explore Indian architecture projects and connect with leading architects on DesignKonnect." />
         <link rel="canonical" href="/" />
       </Helmet>
-      <section className="relative py-20">
-        <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_20%_10%,hsl(var(--primary)/0.15),transparent_40%),radial-gradient(circle_at_80%_30%,hsl(var(--primary)/0.12),transparent_35%)]" />
-        <div className="text-center max-w-3xl mx-auto">
+      <section className="relative py-24">
+        <div
+          className="absolute inset-0 -z-10 bg-cover bg-center"
+          style={{ backgroundImage: "url('/images/hero-buildings.jpg')" }}
+          aria-hidden="true"
+        />
+        <div className="absolute inset-0 -z-10 bg-gradient-to-t from-background/90 via-background/70 to-background/40" aria-hidden="true" />
+        <div className="text-center max-w-3xl mx-auto animate-enter">
           <div className="flex items-center justify-center gap-4 mb-6">
             <img src="/lovable-uploads/bd0a0fee-876a-47b3-8b74-e6ec2838e0b2.png" alt="DesignKonnect logo" className="h-16 w-16" />
             <div>

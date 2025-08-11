@@ -13,7 +13,7 @@ export type ProjectCardProps = {
 
 const ProjectCard = ({ slug, title, category, image, architectName, architectSlug, description }: ProjectCardProps) => {
   return (
-    <article className="rounded-lg border border-border bg-card/60 overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+    <article className="rounded-lg border border-border bg-card/60 overflow-hidden shadow-sm hover:shadow-md transition-shadow hover-scale">
       <div className="relative">
         <img src={image} alt={`${title} project image`} className="w-full h-56 object-cover" loading="lazy" />
         <Badge className="absolute top-3 right-3" variant="secondary">{category}</Badge>
