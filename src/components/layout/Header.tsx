@@ -40,7 +40,7 @@ const Header = () => {
             For Clients
           </Link>
           <Link to="/architects-portal" className="px-4 py-2 rounded-md border border-border text-sm font-medium hover:bg-secondary transition-colors">
-            For Architects
+            Architect Sign Up
           </Link>
         </div>
       </div>
