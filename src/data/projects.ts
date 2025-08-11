@@ -16,10 +16,60 @@ export type Project = {
   specialties: string[];
 };
 
-const img = (q: string) => {
-  const lock = Math.abs(Array.from(q).reduce((a, c) => a + c.charCodeAt(0), 0));
-  return `https://loremflickr.com/1080/720/architecture,interior,exterior,furniture,city,india?lock=${lock}`;
+const imageMap: Record<string, string> = {
+  'glass-house': 'exterior1',
+  'modern-home': 'exterior2',
+  'courtyard': 'exterior3',
+  'living-room': 'interior1',
+  'staircase': 'interior2',
+  'skyscraper': 'exterior4',
+  'atrium': 'interior3',
+  'façade': 'exterior5',
+  'facade': 'exterior5',
+  'sky-garden': 'exterior6',
+  'desert-home': 'exterior2',
+  'minimal-interior': 'interior4',
+  'pool': 'exterior3',
+  'jaali': 'interior5',
+  'museum': 'exterior4',
+  'gallery': 'interior6',
+  'heritage': 'exterior5',
+  'stone-carving': 'interior2',
+  'resort': 'exterior6',
+  'villa': 'exterior1',
+  'beach': 'exterior6',
+  'pool-resort': 'exterior3',
+  'office-campus': 'exterior4',
+  'courtyard-office': 'exterior2',
+  'glass-facade': 'exterior5',
+  'collaboration': 'interior3',
+  'promenade': 'exterior1',
+  'public-space': 'exterior2',
+  'riverfront': 'exterior3',
+  'plaza': 'exterior4',
+  'hospital': 'exterior5',
+  'courtyard-hospital': 'exterior2',
+  'garden': 'exterior6',
+  'light-well': 'interior6',
+  'parametric': 'exterior1',
+  'pavilion': 'exterior2',
+  'expo': 'exterior3',
+  'timber-structure': 'exterior4',
+  'school': 'exterior5',
+  'classroom': 'interior1',
+  'amphitheatre': 'exterior2',
+  'library': 'interior4',
+  'temple': 'exterior3',
+  'courtyard-temple': 'exterior2',
+  'ghat': 'exterior1',
+  'procession': 'exterior4',
+  'mall': 'exterior5',
+  'retail': 'interior5',
+  'atrium-retail': 'interior3',
+  'plaza-retail': 'exterior4',
 };
+
+const img = (q: string) => `/images/projects/${imageMap[q] ?? 'exterior1'}.jpg`;
 
 export const projects: Project[] = [
   {
