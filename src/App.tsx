@@ -16,6 +16,7 @@ import ForArchitects from "./pages/ForArchitects";
 import Contact from "./pages/Contact";
 import Dashboard from "./pages/Dashboard";
 import About from "./pages/About";
+import Client from "./pages/Client";
 
 const queryClient = new QueryClient();
 
@@ -38,6 +39,7 @@ const App = () => (
               <Route path="/architects" element={<Architects />} />
               <Route path="/architects/:slug" element={<ArchitectProfile />} />
               <Route path="/about" element={<About />} />
+              <Route path="/client" element={<Client />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>

@@ -62,7 +62,7 @@ const Index = ({ aboutOnly = false }: { aboutOnly?: boolean }) => {
           <div className="rounded-xl border border-border p-6">
             <h2 className="text-2xl font-semibold mb-2">For Clients</h2>
             <p className="text-muted-foreground">Browse projects and discover architects that fit your vision and budget.</p>
-            <Link to="/projects" className="mt-4 inline-block underline underline-offset-4">Start exploring →</Link>
+            <Link to="/client" className="mt-4 inline-block underline underline-offset-4">Start exploring →</Link>
           </div>
           <div className="rounded-xl border border-border p-6">
             <h2 className="text-2xl font-semibold mb-2">For Architects</h2>
