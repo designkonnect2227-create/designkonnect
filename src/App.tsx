@@ -11,7 +11,7 @@ import Projects from "./pages/Projects";
 import ProjectDetail from "./pages/ProjectDetail";
 import Architects from "./pages/Architects";
 import ArchitectProfile from "./pages/ArchitectProfile";
-import ForClients from "./pages/ForClients";
+import ClientProjectForm from "./pages/ClientProjectForm";
 import ForArchitects from "./pages/ForArchitects";
 import Contact from "./pages/Contact";
 import Dashboard from "./pages/Dashboard";
@@ -29,7 +29,7 @@ const App = () => (
           <Layout>
             <Routes>
               <Route path="/" element={<Index />} />
-              <Route path="/clients" element={<ForClients />} />
+              <Route path="/clients" element={<ClientProjectForm />} />
               <Route path="/architects-portal" element={<ForArchitects />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/dashboard" element={<Dashboard />} />
