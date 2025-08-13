@@ -83,7 +83,7 @@ export const architects: Architect[] = [
     location: 'Pune, Maharashtra',
     experience: '11 yrs',
     rating: 4.7,
-    avatar: 'https://i.pravatar.cc/150?img=5',
+    avatar: 'https://media.istockphoto.com/id/1334828664/photo/indian-architect.webp?a=1&b=1&s=612x612&w=0&k=20&c=KblTZlJH3mmf_65lQN2l5SwPqRVYpthxbjAO6Ps1WFQ=',
     bio: 'Designs refined interiors for homes and hospitality with tactile materials and warm lighting.',
     specializations: ['Interior', 'Hospitality'],
     education: ['B.Arch – Sir JJ College of Architecture, Mumbai'],
