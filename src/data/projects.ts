@@ -15,6 +15,16 @@ export type Project = {
   description: string;
   specialties: string[];
 };
+{project.modelUrl && (
+  <iframe
+    src={project.modelUrl}
+    width="100%"
+    height="600"
+    style={{ border: 'none' }}
+    allowFullScreen
+  />
+)}
+
 
 const imageMap: Record<string, string> = {
   // Residential
