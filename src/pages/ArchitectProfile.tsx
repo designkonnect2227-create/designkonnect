@@ -90,7 +90,7 @@ export default function ArchitectProfile({ architect }: ArchitectProfileProps) {
           <li>After the first layout, charges apply: ₹500 (small), ₹750 (medium), ₹1000 (large).</li>
           <li>Meeting duration: <strong>10 minutes</strong> only.</li>
           <li>3D layout will be delivered to your registered email.</li>
-          <li>Please be prepared with your project details during the meeting.</li>
+          <li>Please be prepared with your project details during the meeting</li>
         </ul>
       </div>
 
