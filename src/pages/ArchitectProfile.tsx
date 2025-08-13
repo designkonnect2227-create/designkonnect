@@ -29,7 +29,7 @@ export default function ArchitectProfile({ architect }: ArchitectProfileProps) {
       .eq("email", data.email);
 
     if (countErr) {
-      toast({ title: "Unable to process request", description: countErr.message, variant: "destructive" });
+      toast({ title: "Unable to process", description: countErr.message, variant: "destructive" });
       setLoading(false);
       return;
     }
