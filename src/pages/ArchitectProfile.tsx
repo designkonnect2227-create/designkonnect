@@ -68,7 +68,7 @@ export default function ArchitectProfile({ architect }: ArchitectProfileProps) {
         title: "3D Layout request sent",
         description: isFree
           ? "This layout is free. We will deliver it via email."
-          : `A ₹${price} fee applies for this layout based on your project size. We will share payment details on confirmation.`,
+          : `A ₹${price} fee applie for this layout based on your project size. We will share payment details on confirmation.`,
       });
       reset();
     }
