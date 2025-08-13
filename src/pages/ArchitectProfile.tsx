@@ -34,7 +34,8 @@ export default function ArchitectProfile({ architect }: ArchitectProfileProps) {
       return;
     }
 
-    const isFree = (count ?? 0) < 3;
+    // First layout free
+    const isFree = (count ?? 0) < 1;
 
     // Price calculation
     let price = 0;
@@ -79,6 +80,20 @@ export default function ArchitectProfile({ architect }: ArchitectProfileProps) {
       <h1 className="mt-4 text-3xl font-bold">{architect.name}</h1>
       <p className="text-muted-foreground">{architect.description}</p>
 
+      {/* Card section with pricing & rules */}
+      <div className="mt-4 p-4 border rounded-lg bg-gray-50">
+        <p className="text-sm text-gray-800 font-medium">
+          Rules & Charges:
+        </p>
+        <ul className="list-disc ml-5 mt-1 text-sm text-gray-700 space-y-1">
+          <li>First 3D home layout is <strong>free</strong>.</li>
+          <li>After the first layout, charges apply: ₹500 (small), ₹750 (medium), ₹1000 (large).</li>
+          <li>Meeting duration: <strong>10 minutes</strong> only.</li>
+          <li>3D layout will be delivered to your registered email.</li>
+          <li>Please be prepared with your project details during the meeting.</li>
+        </ul>
+      </div>
+
       <Dialog>
         <DialogTrigger asChild>
           <Button className="mt-6">Request 3D Layout</Button>
@@ -87,7 +102,8 @@ export default function ArchitectProfile({ architect }: ArchitectProfileProps) {
           <DialogHeader>
             <DialogTitle>Request 3D Layout</DialogTitle>
             <DialogDescription>
-              First 3 home 3D layouts are free. After that, charges range from ₹500–₹1000 per layout depending on project size.
+              First 3D home layout is free. Afterwards ₹500–₹1000 per layout based on project size.
+              Meeting is 10 minutes max, and your final layout will be emailed to you.
             </DialogDescription>
           </DialogHeader>
 
